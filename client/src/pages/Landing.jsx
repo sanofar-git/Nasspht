@@ -79,7 +79,7 @@ export default function Landing() {
             <span className="gradient-text">Live Better</span>
           </h1>
           <p className="hero-subtitle">
-            ShopEZ is your one-stop destination for effortless online shopping.
+            Vizhop is your one-stop destination for effortless online shopping.
             Discover thousands of premium products with amazing deals and fast delivery.
           </p>
           <div className="hero-actions">
@@ -249,7 +249,7 @@ export default function Landing() {
       {/* ─── FEATURES ───────────────────────────────────────────── */}
       <section className="section" style={{paddingTop: 0}}>
         <div className="container">
-          <h2 className="section-title">Why Choose ShopEZ?</h2>
+          <h2 className="section-title">Why Choose Vizhop?</h2>
           <p className="section-subtitle">We make online shopping simple, safe, and satisfying</p>
           <div className="grid grid-4">
             {features.map(f => (

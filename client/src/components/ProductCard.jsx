@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useCart } from '../context/CartContext'
 import { useAuth } from '../context/AuthContext'
 import { useState } from 'react'
@@ -16,6 +16,7 @@ function StarRating({ rating }) {
 export default function ProductCard({ product }) {
   const { addToCart } = useCart()
   const { user } = useAuth()
+  const navigate = useNavigate()
   const [adding, setAdding] = useState(false)
   const [added, setAdded] = useState(false)
 
@@ -23,7 +24,11 @@ export default function ProductCard({ product }) {
 
   const handleAddToCart = async (e) => {
     e.preventDefault()
-    if (!user || user.isAdmin) return
+    if (user?.isAdmin) return
+    if (!user) {
+      navigate('/login')
+      return
+    }
     try {
       setAdding(true)
       await addToCart(product._id, 1)
@@ -44,7 +49,7 @@ export default function ProductCard({ product }) {
           alt={product.name}
           className="product-img"
           loading="lazy"
-          onError={(e) => { e.target.src = 'https://via.placeholder.com/400x300/1a0050/a855f7?text=Product' }}
+          onError={(e) => { e.target.src = 'https://placehold.co/400x300/1a0050/a855f7?text=Product' }}
         />
         {product.discount > 0 && (
           <span className="product-discount-badge">-{product.discount}%</span>
@@ -112,14 +117,19 @@ export default function ProductCard({ product }) {
           position: relative;
           overflow: hidden;
           aspect-ratio: 4/3;
+          background: rgba(10, 0, 40, 0.6);
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
         .product-img {
           width: 100%;
           height: 100%;
-          object-fit: cover;
+          object-fit: contain;
           transition: transform 0.5s ease;
+          padding: 8px;
         }
-        .product-card:hover .product-img { transform: scale(1.05); }
+        .product-card:hover .product-img { transform: scale(1.06); }
         .product-discount-badge {
           position: absolute;
           top: 12px; left: 12px;

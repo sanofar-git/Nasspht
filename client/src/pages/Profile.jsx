@@ -182,7 +182,7 @@ export default function Profile() {
         .order-total-tag { font-weight: 700; font-size: 1rem; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
         .order-items-preview { display: flex; flex-direction: column; gap: 10px; margin-bottom: 12px; }
         .order-preview-item { display: flex; align-items: center; gap: 12px; }
-        .order-preview-img { width: 44px; height: 44px; border-radius: var(--radius-sm); object-fit: cover; }
+        .order-preview-img { width: 52px; height: 52px; border-radius: var(--radius-sm); object-fit: contain; background: rgba(10,0,40,0.7); padding: 3px; flex-shrink: 0; }
         .order-item-name { font-size: 0.88rem; font-weight: 600; color: var(--text-primary); }
         .order-item-qty { font-size: 0.78rem; color: var(--text-muted); }
         .order-more { font-size: 0.8rem; color: var(--text-muted); font-style: italic; }

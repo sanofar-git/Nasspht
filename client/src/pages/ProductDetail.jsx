@@ -91,7 +91,7 @@ export default function ProductDetail() {
             src={product.image}
             alt={product.name}
             className="detail-img"
-            onError={(e) => { e.target.src='https://via.placeholder.com/600x500/1a0050/a855f7?text=Product' }}
+            onError={(e) => { e.target.src='https://placehold.co/600x500/1a0050/a855f7?text=Product' }}
           />
           {product.discount > 0 && (
             <div className="detail-discount-badge">
@@ -197,8 +197,8 @@ export default function ProductDetail() {
         .breadcrumb a:hover { color: var(--purple-light); }
         .bc-current { color: var(--text-primary); font-weight: 500; }
         .detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
-        .detail-img-wrap { position: relative; }
-        .detail-img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; }
+        .detail-img-wrap { position: relative; background: rgba(10, 0, 40, 0.6); display: flex; align-items: center; justify-content: center; min-height: 320px; }
+        .detail-img { width: 100%; max-height: 480px; object-fit: contain; display: block; padding: 16px; }
         .detail-discount-badge { position: absolute; top: 20px; left: 20px; }
         .detail-info { display: flex; flex-direction: column; gap: 24px; }
         .detail-category { display: flex; gap: 8px; flex-wrap: wrap; }

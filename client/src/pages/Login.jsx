@@ -31,7 +31,7 @@ export default function Login() {
     <div className="auth-page fade-in">
       <div className="auth-card glass-card">
         <div className="auth-header">
-          <div className="auth-logo">⚡ ShopEZ</div>
+          <div className="auth-logo">⚡ Vizhop</div>
           <h1 className="auth-title">Welcome Back</h1>
           <p className="auth-subtitle">Login to your account to continue shopping</p>
         </div>

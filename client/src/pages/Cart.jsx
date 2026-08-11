@@ -45,10 +45,10 @@ export default function Cart() {
             return (
               <div key={item._id} className="cart-item glass-card">
                 <img
-                  src={product.image}
-                  alt={product.name}
+                  src={item.product.image}
+                  alt={item.product.name}
                   className="cart-item-img"
-                  onError={(e) => { e.target.src='https://via.placeholder.com/100/1a0050/a855f7?text=P' }}
+                  onError={(e) => { e.target.src='https://placehold.co/100x100/1a0050/a855f7?text=P' }}
                 />
                 <div className="cart-item-info">
                   <Link to={`/products/${product._id}`} className="cart-item-name">{product.name}</Link>
@@ -124,7 +124,7 @@ export default function Cart() {
         .cart-layout { display: grid; grid-template-columns: 1fr 360px; gap: 28px; align-items: start; }
         .cart-items { display: flex; flex-direction: column; gap: 16px; }
         .cart-item { display: flex; align-items: center; gap: 20px; padding: 20px; }
-        .cart-item-img { width: 90px; height: 90px; object-fit: cover; border-radius: var(--radius-md); flex-shrink: 0; }
+        .cart-item-img { width: 90px; height: 90px; object-fit: contain; border-radius: var(--radius-md); flex-shrink: 0; background: rgba(10,0,40,0.6); padding: 4px; }
         .cart-item-info { flex: 1; display: flex; flex-direction: column; gap: 8px; }
         .cart-item-name { font-weight: 600; color: var(--text-primary); text-decoration: none; font-size: 0.95rem; transition: var(--transition-fast); }
         .cart-item-name:hover { color: var(--purple-light); }

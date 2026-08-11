@@ -19,7 +19,7 @@ export default function AdminLayout() {
       {/* Sidebar */}
       <aside className="admin-sidebar">
         <div className="admin-brand">
-          <div className="admin-logo">⚡ ShopEZ</div>
+          <div className="admin-logo">⚡ Vizhop</div>
           <div className="admin-role-badge">Admin Panel</div>
         </div>
 

@@ -136,7 +136,7 @@ export default function Checkout() {
               <div className="checkout-items">
                 {items.map(item => item.product && (
                   <div key={item._id} className="checkout-item">
-                    <img src={item.product.image} alt={item.product.name} className="co-img" onError={(e)=>{e.target.src='https://via.placeholder.com/60/1a0050/a855f7?text=P'}} />
+                    <img src={item.product.image} alt={item.product.name} className="co-img" onError={(e)=>{e.target.src='https://placehold.co/60/1a0050/a855f7?text=P'}} />
                     <div className="co-info">
                       <div className="co-name">{item.product.name}</div>
                       <div className="co-qty">Qty: {item.quantity}</div>
@@ -185,7 +185,7 @@ export default function Checkout() {
         .payment-check { color: var(--purple-light); font-weight: 700; font-size: 1rem; }
         .checkout-items { display: flex; flex-direction: column; gap: 12px; }
         .checkout-item { display: flex; align-items: center; gap: 12px; }
-        .co-img { width: 52px; height: 52px; object-fit: cover; border-radius: var(--radius-sm); }
+        .co-img { width: 60px; height: 60px; object-fit: contain; border-radius: var(--radius-sm); background: rgba(10,0,40,0.7); padding: 4px; flex-shrink: 0; }
         .co-info { flex: 1; }
         .co-name { font-size: 0.85rem; font-weight: 600; color: var(--text-primary); line-height: 1.3; }
         .co-qty { font-size: 0.78rem; color: var(--text-muted); margin-top: 2px; }

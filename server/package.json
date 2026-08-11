@@ -1,7 +1,7 @@
 {
-  "name": "shopez-server",
+  "name": "vizhop-server",
   "version": "1.0.0",
-  "description": "ShopEZ E-Commerce Backend API",
+  "description": "Vizhop E-Commerce Backend API",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",

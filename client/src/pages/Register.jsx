@@ -31,7 +31,7 @@ export default function Register() {
     <div className="auth-page fade-in">
       <div className="auth-card glass-card">
         <div className="auth-header">
-          <div className="auth-logo">⚡ ShopEZ</div>
+          <div className="auth-logo">⚡ Vizhop</div>
           <h1 className="auth-title">Create Account</h1>
           <p className="auth-subtitle">Join thousands of happy shoppers today</p>
         </div>

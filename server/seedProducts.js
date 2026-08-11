@@ -4,7 +4,7 @@ const Product = require('./models/Product');
 
 dotenv.config();
 
-const mongoURI = process.env.MONGO_URI || 'mongodb://localhost:27017/shopez';
+const mongoURI = process.env.MONGO_URI || 'mongodb://localhost:27017/vizhop';
 
 const products = [
   // ─── ELECTRONICS (10 items) ────────────────────────────────────────────────
@@ -90,7 +90,7 @@ const products = [
     description: 'Simultaneously charge your phone and wireless earbuds. Sleek leather-accented design with 15W fast charging capacity.',
     price: 1999,
     category: 'Electronics',
-    image: 'https://images.unsplash.com/photo-1622445262465-2481c4574875?w=600&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1616348436168-de43ad0db179?w=600&auto=format&fit=crop',
     stock: 150,
     discount: 35, // For limited offer block
     rating: 4.3,
@@ -101,7 +101,7 @@ const products = [
     description: 'High capacity portable charger with Power Delivery 3.0. Charges laptops, tablets, and smartphones on the go.',
     price: 2199,
     category: 'Electronics',
-    image: 'https://images.unsplash.com/photo-1609592424109-dd9892f1b17c?w=600&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&auto=format&fit=crop',
     stock: 200,
     discount: 15,
     rating: 4.6,
@@ -316,7 +316,7 @@ const products = [
     description: 'Ultra-lightweight polycarbonate hard shell. Features 360-degree silent spinner wheels and TSA-approved lock.',
     price: 5999,
     category: 'Bags',
-    image: 'https://images.unsplash.com/photo-1565026057447-bc90a3dca487?w=600&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&auto=format&fit=crop',
     stock: 25,
     discount: 30,
     rating: 4.8,
@@ -373,7 +373,7 @@ const products = [
     description: 'Includes a luxurious pure silk jacquard weave necktie, matching pocket square handkerchief, and silver cufflinks.',
     price: 1299,
     category: 'Accessories',
-    image: 'https://images.unsplash.com/photo-1589756823855-edd105364843?w=600&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&auto=format&fit=crop',
     stock: 50,
     discount: 25,
     rating: 4.5,
@@ -498,7 +498,7 @@ const products = [
     description: 'Sleek silent non-ticking quartz wall clock. Premium wooden dial face plate and modern black metal tick pointers.',
     price: 1899,
     category: 'Home',
-    image: 'https://images.unsplash.com/photo-1563861826100-9cb868fdcd1d?w=600&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=600&auto=format&fit=crop',
     stock: 40,
     discount: 40, // For limited offer block
     rating: 4.4,
@@ -603,7 +603,7 @@ const products = [
     description: 'Reinforced 10-rib structure with automatic open and close buttons. Teflon coated water-repelling travel canopy.',
     price: 799,
     category: 'Other',
-    image: 'https://images.unsplash.com/photo-1522441815192-d9f04eb0615c?w=600&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&auto=format&fit=crop',
     stock: 110,
     discount: 30,
     rating: 4.5,
@@ -630,6 +630,234 @@ const products = [
     discount: 20,
     rating: 4.6,
     reviews: 104
+  },
+
+  // ─── GROCERIES & GOURMET (5 items) ─────────────────────────────────────────
+  {
+    name: 'Organic Arabica Coffee Beans',
+    description: 'Whole bean medium roast coffee with notes of chocolate and caramel. Ethically sourced and freshly roasted.',
+    price: 899,
+    category: 'Groceries',
+    image: 'https://images.unsplash.com/photo-1559525839-b184a4d698c7?w=600&auto=format&fit=crop',
+    stock: 200,
+    discount: 10,
+    rating: 4.8,
+    reviews: 450
+  },
+  {
+    name: 'Premium Match Green Tea Powder',
+    description: 'Ceremonial grade matcha from Kyoto, Japan. Vibrant green color, smooth flavor, perfect for lattes or traditional tea.',
+    price: 1499,
+    category: 'Groceries',
+    image: 'https://images.unsplash.com/photo-1582793988951-9aed5509eb97?w=600&auto=format&fit=crop',
+    stock: 120,
+    discount: 15,
+    rating: 4.9,
+    reviews: 320
+  },
+  {
+    name: 'Artisan Dark Chocolate Truffles',
+    description: 'Box of 12 handcrafted vegan dark chocolate truffles with diverse fillings like raspberry, sea salt caramel, and espresso.',
+    price: 1299,
+    category: 'Groceries',
+    image: 'https://images.unsplash.com/photo-1511381939415-e44015466834?w=600&auto=format&fit=crop',
+    stock: 80,
+    discount: 5,
+    rating: 4.7,
+    reviews: 190
+  },
+  {
+    name: 'Raw Manuka Honey MGO 400+',
+    description: '100% pure New Zealand Manuka honey. Renowned for its natural antibacterial properties and rich earthy flavor.',
+    price: 2999,
+    category: 'Groceries',
+    image: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&auto=format&fit=crop',
+    stock: 60,
+    discount: 20,
+    rating: 4.9,
+    reviews: 415
+  },
+  {
+    name: 'Himalayan Pink Salt Grinder',
+    description: 'Coarse crystal pink salt rich in trace minerals. Comes in a refillable glass grinder bottle.',
+    price: 499,
+    category: 'Groceries',
+    image: 'https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?w=600&auto=format&fit=crop',
+    stock: 300,
+    discount: 0,
+    rating: 4.6,
+    reviews: 125
+  },
+
+  // ─── PET SUPPLIES (5 items) ────────────────────────────────────────────────
+  {
+    name: 'Orthopedic Dog Bed with Memory Foam',
+    description: 'Premium pet bed providing ultimate support for joints. Features a washable, water-resistant removable cover.',
+    price: 3499,
+    category: 'Pet Supplies',
+    image: 'https://images.unsplash.com/photo-1541599540903-216a46ca1dc0?w=600&auto=format&fit=crop',
+    stock: 45,
+    discount: 25,
+    rating: 4.8,
+    reviews: 280
+  },
+  {
+    name: 'Interactive Laser Cat Toy',
+    description: 'Automatic rotating laser pointer to keep your feline friends entertained for hours. USB rechargeable.',
+    price: 1299,
+    category: 'Pet Supplies',
+    image: 'https://images.unsplash.com/photo-1513245543132-31f507417b26?w=600&auto=format&fit=crop',
+    stock: 150,
+    discount: 10,
+    rating: 4.5,
+    reviews: 340
+  },
+  {
+    name: 'Grain-Free Premium Salmon Dog Food',
+    description: '15kg bag of highly digestible dog food made with real salmon. Promotes a healthy coat and immune system.',
+    price: 4599,
+    category: 'Pet Supplies',
+    image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=600&auto=format&fit=crop',
+    stock: 90,
+    discount: 15,
+    rating: 4.7,
+    reviews: 512
+  },
+  {
+    name: 'Retractable Heavy Duty Dog Leash',
+    description: '5-meter strong nylon tape leash for dogs up to 50kg. Anti-slip handle and quick lock/unlock button.',
+    price: 899,
+    category: 'Pet Supplies',
+    image: 'https://images.unsplash.com/photo-1601758003122-53c40e686a19?w=600&auto=format&fit=crop',
+    stock: 200,
+    discount: 20,
+    rating: 4.6,
+    reviews: 185
+  },
+  {
+    name: 'Self-Cleaning Cat Litter Box',
+    description: 'Smart litter box with odor control and automatic scooping. Connects to your phone for health monitoring.',
+    price: 14999,
+    category: 'Pet Supplies',
+    image: 'https://images.unsplash.com/photo-1592194996308-7b43878e84a6?w=600&auto=format&fit=crop',
+    stock: 20,
+    discount: 30,
+    rating: 4.9,
+    reviews: 142
+  },
+
+  // ─── TOYS & GAMES (5 items) ────────────────────────────────────────────────
+  {
+    name: 'Classic Wooden Chess Set',
+    description: 'Handcrafted magnetic wooden chess board with intricately carved pieces. Folds for easy storage and travel.',
+    price: 1999,
+    category: 'Toys',
+    image: 'https://images.unsplash.com/photo-1580541832626-2a7131ee809f?w=600&auto=format&fit=crop',
+    stock: 75,
+    discount: 10,
+    rating: 4.8,
+    reviews: 210
+  },
+  {
+    name: '1000-Piece Landscape Jigsaw Puzzle',
+    description: 'Beautiful high-definition print of a serene mountain landscape. Precision-cut pieces ensure a tight interlocking fit.',
+    price: 799,
+    category: 'Toys',
+    image: 'https://images.unsplash.com/photo-1611996575749-79a3a250f948?w=600&auto=format&fit=crop',
+    stock: 120,
+    discount: 15,
+    rating: 4.7,
+    reviews: 305
+  },
+  {
+    name: 'Educational Building Blocks Set',
+    description: '500 colorful interlocking plastic blocks to inspire creativity and spatial reasoning in children aged 4+.',
+    price: 1499,
+    category: 'Toys',
+    image: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=600&auto=format&fit=crop',
+    stock: 180,
+    discount: 25,
+    rating: 4.6,
+    reviews: 420
+  },
+  {
+    name: 'Remote Control Off-Road Truck',
+    description: '1:16 scale 4WD RC car capable of tackling rough terrain. Reaches speeds up to 25 km/h. Includes 2 batteries.',
+    price: 2499,
+    category: 'Toys',
+    image: 'https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=600&auto=format&fit=crop',
+    stock: 60,
+    discount: 20,
+    rating: 4.5,
+    reviews: 175
+  },
+  {
+    name: 'Family Board Game: Strategic Conquest',
+    description: 'Lead your civilization to victory in this award-winning strategy board game. For 2-4 players, ages 10+.',
+    price: 2999,
+    category: 'Toys',
+    image: 'https://images.unsplash.com/photo-1611891487122-207579d67d98?w=600&auto=format&fit=crop',
+    stock: 90,
+    discount: 30,
+    rating: 4.9,
+    reviews: 540
+  },
+
+  // ─── AUTOMOTIVE (5 items) ──────────────────────────────────────────────────
+  {
+    name: 'Portable Car Jump Starter 1500A',
+    description: 'Jump start your dead car battery up to 20 times on a single charge. Also acts as a power bank and LED flashlight.',
+    price: 4999,
+    category: 'Automotive',
+    image: 'https://images.unsplash.com/photo-1588508065123-287b28e013da?w=600&auto=format&fit=crop',
+    stock: 40,
+    discount: 15,
+    rating: 4.8,
+    reviews: 312
+  },
+  {
+    name: 'High-Definition Dual Dash Cam',
+    description: 'Front and rear 1080P recording with G-sensor loop recording, night vision, and a 170-degree wide angle lens.',
+    price: 3499,
+    category: 'Automotive',
+    image: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=600&auto=format&fit=crop',
+    stock: 85,
+    discount: 25,
+    rating: 4.6,
+    reviews: 295
+  },
+  {
+    name: 'Memory Foam Car Neck Pillow',
+    description: 'Ergonomic headrest cushion that provides comfortable neck and shoulder support for long drives.',
+    price: 899,
+    category: 'Automotive',
+    image: 'https://images.unsplash.com/photo-1625895197185-efcec01cffe0?w=600&auto=format&fit=crop',
+    stock: 150,
+    discount: 10,
+    rating: 4.4,
+    reviews: 145
+  },
+  {
+    name: 'Digital Tire Pressure Inflator',
+    description: '12V portable air compressor pump with auto shut-off and digital display. Quickly inflates car, bike, and sports balls.',
+    price: 2199,
+    category: 'Automotive',
+    image: 'https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=600&auto=format&fit=crop',
+    stock: 110,
+    discount: 20,
+    rating: 4.7,
+    reviews: 420
+  },
+  {
+    name: 'Premium Microfiber Car Wash Towels (6-Pack)',
+    description: 'Ultra-absorbent, scratch-free, and lint-free cleaning cloths. Perfect for washing, drying, and detailing vehicles.',
+    price: 699,
+    category: 'Automotive',
+    image: 'https://images.unsplash.com/photo-1601362840469-51e4d8d58785?w=600&auto=format&fit=crop',
+    stock: 300,
+    discount: 5,
+    rating: 4.9,
+    reviews: 860
   }
 ];
 
@@ -645,7 +873,7 @@ const seedProducts = async () => {
     await Product.deleteMany({});
     console.log('🧹 Cleared all existing products');
 
-    // Insert 55 new products
+    // Insert 75 new products
     const seeded = await Product.insertMany(products);
     console.log(`🎉 Successfully seeded ${seeded.length} products!`);
 

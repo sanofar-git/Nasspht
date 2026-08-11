@@ -11,13 +11,22 @@ const createOrder = async (req, res) => {
       return res.status(400).json({ message: 'Missing required order fields' });
     }
 
+    // Check stock first
+    for (const item of items) {
+      const product = await Product.findById(item.product);
+      if (!product) {
+        return res.status(404).json({ message: `Product ${item.name} not found` });
+      }
+      if (product.stock < item.quantity) {
+        return res.status(400).json({ message: `Insufficient stock for ${product.name}` });
+      }
+    }
+
     // Reduce stock
     for (const item of items) {
       const product = await Product.findById(item.product);
-      if (product) {
-        product.stock = Math.max(0, product.stock - item.quantity);
-        await product.save();
-      }
+      product.stock -= item.quantity;
+      await product.save();
     }
 
     const order = await Order.create({

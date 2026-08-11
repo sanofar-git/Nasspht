@@ -8,9 +8,23 @@ dotenv.config();
 
 const app = express();
 
-// ─── Middleware ───────────────────────────────────────────────────────────────
+const allowedOrigins = [
+  'http://localhost:5173',
+  'http://localhost:3000',
+];
+
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://localhost:3000'],
+  origin: function (origin, callback) {
+    if (!origin) return callback(null, true);
+    if (
+      allowedOrigins.includes(origin) ||
+      /\.vercel\.app$/.test(origin) ||
+      (process.env.CLIENT_URL && origin === process.env.CLIENT_URL)
+    ) {
+      return callback(null, true);
+    }
+    return callback(null, true);
+  },
   credentials: true,
 }));
 app.use(express.json({ limit: '10mb' }));
@@ -25,7 +39,7 @@ app.use('/api/admin',    require('./routes/admin'));
 
 // ─── Health Check ─────────────────────────────────────────────────────────────
 app.get('/api/health', (req, res) => {
-  res.json({ status: 'OK', message: 'ShopEZ API is running 🚀' });
+  res.json({ status: 'OK', message: 'Vizhop API is running 🚀' });
 });
 
 // ─── Global Error Handler ─────────────────────────────────────────────────────
@@ -211,7 +225,7 @@ const connectDB = async () => {
 const PORT = process.env.PORT || 8000;
 connectDB().then(() => {
   app.listen(PORT, () => {
-    console.log(`🚀 ShopEZ Server running on http://localhost:${PORT}`);
+    console.log(`🚀 Vizhop Server running on http://localhost:${PORT}`);
     console.log(`📌 Admin: admin@gmail.com | Password: admin123`);
   });
 });

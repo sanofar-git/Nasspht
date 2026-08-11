@@ -152,7 +152,7 @@ export default function AllOrders() {
         .aoc-email { font-size: 0.78rem; color: var(--text-muted); }
         .aoc-items-preview { display: flex; flex-direction: column; gap: 6px; padding: 10px; background: rgba(255,255,255,0.03); border-radius: var(--radius-sm); }
         .aoc-item { display: flex; align-items: center; gap: 8px; }
-        .aoc-item-img { width: 32px; height: 32px; border-radius: 4px; object-fit: cover; }
+        .aoc-item-img { width: 38px; height: 38px; border-radius: 4px; object-fit: contain; background: rgba(10,0,40,0.7); padding: 2px; flex-shrink: 0; }
         .aoc-item-name { font-size: 0.82rem; color: var(--text-secondary); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; }
         .aoc-address { font-size: 0.82rem; color: var(--text-muted); }
         .aoc-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.04); flex-wrap: wrap; gap: 10px; }

@@ -33,7 +33,7 @@ export default function OrderConfirmation() {
       <div className="oc-success glass-card">
         <div className="oc-checkmark">✓</div>
         <h1 className="oc-title">Order Placed Successfully!</h1>
-        <p className="oc-subtitle">Thank you for shopping with ShopEZ. Your order has been confirmed.</p>
+        <p className="oc-subtitle">Thank you for shopping with Vizhop. Your order has been confirmed.</p>
         <div className="oc-id">Order ID: <strong>#{order._id.slice(-8).toUpperCase()}</strong></div>
       </div>
 
@@ -128,7 +128,7 @@ export default function OrderConfirmation() {
         .oc-grid { display: grid; grid-template-columns: 1fr 360px; gap: 24px; align-items: start; }
         .oc-items { display: flex; flex-direction: column; gap: 14px; margin-bottom: 20px; }
         .oc-item { display: flex; align-items: center; gap: 12px; }
-        .oc-item-img { width: 52px; height: 52px; object-fit: cover; border-radius: var(--radius-sm); }
+        .oc-item-img { width: 64px; height: 64px; object-fit: contain; border-radius: var(--radius-sm); background: rgba(10,0,40,0.7); padding: 4px; flex-shrink: 0; }
         .oc-item-info { flex: 1; }
         .oc-item-name { font-size: 0.88rem; font-weight: 600; color: var(--text-primary); }
         .oc-item-qty { font-size: 0.78rem; color: var(--text-muted); }

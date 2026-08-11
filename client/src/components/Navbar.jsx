@@ -34,7 +34,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link to="/" className="nav-logo">
             <span className="logo-icon">⚡</span>
-            <span className="logo-text">Shop<span className="logo-ez">EZ</span></span>
+            <span className="logo-text">Vizhop</span>
           </Link>
 
           {/* Center Links */}

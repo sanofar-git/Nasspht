@@ -84,8 +84,8 @@ export default function AllProducts() {
                         <img
                           src={product.image}
                           alt={product.name}
-                          style={{width:'52px', height:'52px', objectFit:'cover', borderRadius:'var(--radius-md)'}}
-                          onError={(e)=>{e.target.src='https://via.placeholder.com/52/1a0050/a855f7?text=P'}}
+                          style={{width:'60px', height:'60px', objectFit:'contain', borderRadius:'var(--radius-md)', background:'rgba(10,0,40,0.7)', padding:'4px', flexShrink:0}}
+                          onError={(e)=>{e.target.src='https://placehold.co/60/1a0050/a855f7?text=P'}}
                         />
                       </td>
                       <td>
