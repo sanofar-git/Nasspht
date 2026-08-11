@@ -8,6 +8,7 @@ A modern, full-stack E-Commerce web application featuring a high-performance Rea
 
 - 🚀 **Live Frontend (Vercel)**: [https://nasspht.vercel.app](https://nasspht.vercel.app)
 - 🟢 **Live Backend API (Render)**: [https://nasspht.onrender.com](https://nasspht.onrender.com)
+- 🎬 **Live Demo Video**: [Watch Demo Video](https://drive.google.com/file/d/1i7fG-vnVZI0kGNR0loXIqXaw_L0z660N/view?usp=sharing)
 - 📁 **Google Drive Project Folder**: [Open Google Drive (Nasspjt)](https://drive.google.com/drive/folders/10L_osSYpoI0SQZRBM9s-B77__VXmtleF)
 
 ---
