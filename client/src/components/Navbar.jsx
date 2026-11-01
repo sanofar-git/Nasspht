@@ -11,6 +11,18 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const [profileOpen, setProfileOpen] = useState(false)
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem('vizhop_theme') || 'dark';
+  })
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('vizhop_theme', theme);
+  }, [theme])
+
+  const toggleTheme = () => {
+    setTheme(prev => (prev === 'dark' ? 'light' : 'dark'));
+  }
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
@@ -88,6 +100,17 @@ export default function Navbar() {
               </div>
             )}
 
+            {/* Theme Toggle */}
+            <button
+              className="theme-toggle-btn"
+              onClick={toggleTheme}
+              title={`Switch to ${theme === 'dark' ? 'Light' : 'Dark'} Mode`}
+              aria-label="Toggle Theme"
+              id="navbar-theme-btn"
+            >
+              {theme === 'dark' ? '☀️' : '🌙'}
+            </button>
+
             {/* Mobile Hamburger */}
             <button className="hamburger show-mobile" onClick={() => setMenuOpen(!menuOpen)} id="navbar-hamburger">
               <span></span><span></span><span></span>
@@ -105,6 +128,9 @@ export default function Navbar() {
             {user && user.isAdmin && <Link to="/admin" className="mobile-link">Admin Dashboard</Link>}
             {!user && <Link to="/login" className="mobile-link">Login</Link>}
             {!user && <Link to="/register" className="mobile-link">Sign Up</Link>}
+            <button className="mobile-link theme-mobile-link" onClick={toggleTheme}>
+              {theme === 'dark' ? '☀️ Switch to Light Mode' : '🌙 Switch to Dark Mode'}
+            </button>
             {user && <button className="mobile-link danger-link" onClick={handleLogout}>Logout</button>}
           </div>
         )}
@@ -117,7 +143,7 @@ export default function Navbar() {
           position: fixed;
           top: 0; left: 0; right: 0;
           z-index: 1000;
-          background: rgba(5, 0, 26, 0.5);
+          background: var(--nav-bg, rgba(5, 0, 26, 0.5));
           backdrop-filter: blur(20px);
           -webkit-backdrop-filter: blur(20px);
           border-bottom: 1px solid transparent;
@@ -125,8 +151,8 @@ export default function Navbar() {
           height: 72px;
         }
         .navbar.scrolled {
-          background: rgba(5, 0, 26, 0.9);
-          border-bottom-color: rgba(255,255,255,0.08);
+          background: var(--nav-bg-scrolled, rgba(5, 0, 26, 0.9));
+          border-bottom-color: var(--nav-border-scrolled, rgba(255,255,255,0.08));
           box-shadow: 0 4px 30px rgba(0,0,0,0.3);
         }
         .nav-container {
@@ -247,6 +273,29 @@ export default function Navbar() {
           border: none;
           cursor: pointer;
           padding: 8px;
+        }
+        .theme-toggle-btn {
+          width: 44px; height: 44px;
+          display: flex; align-items: center; justify-content: center;
+          background: rgba(255,255,255,0.06);
+          border: 1px solid rgba(255,255,255,0.1);
+          border-radius: var(--radius-full);
+          cursor: pointer;
+          transition: var(--transition);
+          font-size: 1.15rem;
+          color: var(--text-primary);
+        }
+        .theme-toggle-btn:hover {
+          background: rgba(168,85,247,0.2);
+          border-color: var(--purple);
+          transform: scale(1.08);
+        }
+        .theme-mobile-link {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          color: var(--purple-light);
+          font-weight: 600;
         }
         .hamburger span { display: block; width: 22px; height: 2px; background: var(--text-secondary); border-radius: 2px; transition: var(--transition-fast); }
         .show-mobile { display: flex !important; }

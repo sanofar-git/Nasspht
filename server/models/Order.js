@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const { createModelAdapter } = require('./modelAdapter');
 
 const orderItemSchema = new mongoose.Schema({
   product: {
@@ -46,4 +47,5 @@ const orderSchema = new mongoose.Schema({
   timestamps: true,
 });
 
-module.exports = mongoose.model('Order', orderSchema);
+const MongooseOrder = mongoose.models.Order || mongoose.model('Order', orderSchema);
+module.exports = createModelAdapter('Order', MongooseOrder);

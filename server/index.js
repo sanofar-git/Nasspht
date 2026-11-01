@@ -186,13 +186,26 @@ const sampleProducts = [
 
 // ─── DB Connection + Server Start ─────────────────────────────────────────────
 const connectDB = async () => {
-  try {
-    await mongoose.connect(process.env.MONGO_URI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
-    console.log('✅ MongoDB Connected');
+  let mongoConnected = false;
+  if (process.env.MONGO_URI) {
+    try {
+      console.log('🔄 Attempting MongoDB connection...');
+      await mongoose.connect(process.env.MONGO_URI, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        serverSelectionTimeoutMS: 5000,
+      });
+      console.log('✅ MongoDB Connected successfully');
+      mongoConnected = true;
+    } catch (err) {
+      console.warn('⚠️ MongoDB connection failed:', err.message);
+      console.log('📦 Activating built-in resilient JSON Database store.');
+    }
+  } else {
+    console.log('ℹ️ No MONGO_URI provided. Using built-in resilient JSON Database store.');
+  }
 
+  try {
     // Seed admin user
     const User = require('./models/User');
     const adminExists = await User.findOne({ email: 'admin@gmail.com' });
@@ -215,10 +228,8 @@ const connectDB = async () => {
       await Product.insertMany(sampleProducts);
       console.log(`✅ ${sampleProducts.length} sample products seeded`);
     }
-
   } catch (err) {
-    console.error('❌ DB Connection Error:', err.message);
-    process.exit(1);
+    console.error('Data initialization warning:', err.message);
   }
 };
 

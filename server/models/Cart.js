@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const { createModelAdapter } = require('./modelAdapter');
 
 const cartItemSchema = new mongoose.Schema({
   product: {
@@ -40,4 +41,5 @@ cartSchema.virtual('totalItems').get(function () {
   return this.items.reduce((count, item) => count + item.quantity, 0);
 });
 
-module.exports = mongoose.model('Cart', cartSchema);
+const MongooseCart = mongoose.models.Cart || mongoose.model('Cart', cartSchema);
+module.exports = createModelAdapter('Cart', MongooseCart);

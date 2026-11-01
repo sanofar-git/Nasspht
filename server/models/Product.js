@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const { createModelAdapter } = require('./modelAdapter');
 
 const productSchema = new mongoose.Schema({
   name: {
@@ -57,4 +58,5 @@ productSchema.virtual('finalPrice').get(function () {
   return parseFloat((this.price * (1 - this.discount / 100)).toFixed(2));
 });
 
-module.exports = mongoose.model('Product', productSchema);
+const MongooseProduct = mongoose.models.Product || mongoose.model('Product', productSchema);
+module.exports = createModelAdapter('Product', MongooseProduct);

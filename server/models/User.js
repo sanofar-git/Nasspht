@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const { createModelAdapter } = require('./modelAdapter');
 
 const userSchema = new mongoose.Schema({
   name: {
@@ -42,4 +43,5 @@ const userSchema = new mongoose.Schema({
   timestamps: true,
 });
 
-module.exports = mongoose.model('User', userSchema);
+const MongooseUser = mongoose.models.User || mongoose.model('User', userSchema);
+module.exports = createModelAdapter('User', MongooseUser);
