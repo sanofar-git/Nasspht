@@ -204,3 +204,4 @@ function createModelAdapter(type, MongooseModel) {
 }
 
 module.exports = { createModelAdapter, isMongoActive };
+

@@ -223,11 +223,16 @@ const connectDB = async () => {
 
     // Seed sample products
     const Product = require('./models/Product');
+    const Order = require('./models/Order');
     const productCount = await Product.countDocuments();
     if (productCount === 0) {
       await Product.insertMany(sampleProducts);
       console.log(`✅ ${sampleProducts.length} sample products seeded`);
     }
+
+    // Seed customer members & realistic revenue orders
+    const { seedMembersAndOrders } = require('./seedData');
+    await seedMembersAndOrders(User, Product, Order);
   } catch (err) {
     console.error('Data initialization warning:', err.message);
   }

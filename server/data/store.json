@@ -9,6 +9,166 @@
       "_id": "6cf50baa834b981bc0daf76a",
       "createdAt": "2026-11-01T15:27:01.724Z",
       "updatedAt": "2026-11-01T15:27:01.725Z"
+    },
+    {
+      "name": "Priya Sharma",
+      "email": "priya.sharma@gmail.com",
+      "password": "$2a$10$gDBQb801y.JwtyYuMKFX5Opyj2Kmri7cNvgsFRh6SVjxTOJEDPp9.",
+      "phone": "9840123456",
+      "address": {
+        "street": "42 MG Road",
+        "city": "Bengaluru",
+        "state": "Karnataka",
+        "pincode": "560001"
+      },
+      "isAdmin": false,
+      "_id": "c948c0b2b69510bdfa7a3cd7",
+      "createdAt": "2026-11-01T15:50:35.868Z",
+      "updatedAt": "2026-11-01T15:50:35.869Z"
+    },
+    {
+      "name": "Rahul Verma",
+      "email": "rahul.verma@gmail.com",
+      "password": "$2a$10$gDBQb801y.JwtyYuMKFX5Opyj2Kmri7cNvgsFRh6SVjxTOJEDPp9.",
+      "phone": "9876543210",
+      "address": {
+        "street": "15 Anna Nagar 2nd Ave",
+        "city": "Chennai",
+        "state": "Tamil Nadu",
+        "pincode": "600040"
+      },
+      "isAdmin": false,
+      "_id": "de7de45eb1342e68182f9bee",
+      "createdAt": "2026-11-01T15:50:35.870Z",
+      "updatedAt": "2026-11-01T15:50:35.870Z"
+    },
+    {
+      "name": "Ananya Iyer",
+      "email": "ananya.iyer@gmail.com",
+      "password": "$2a$10$gDBQb801y.JwtyYuMKFX5Opyj2Kmri7cNvgsFRh6SVjxTOJEDPp9.",
+      "phone": "9811223344",
+      "address": {
+        "street": "78 Bandra West",
+        "city": "Mumbai",
+        "state": "Maharashtra",
+        "pincode": "400050"
+      },
+      "isAdmin": false,
+      "_id": "ce89efdab102187d0fd1bf05",
+      "createdAt": "2026-11-01T15:50:35.871Z",
+      "updatedAt": "2026-11-01T15:50:35.871Z"
+    },
+    {
+      "name": "Karthik Rajan",
+      "email": "karthik.rajan@gmail.com",
+      "password": "$2a$10$gDBQb801y.JwtyYuMKFX5Opyj2Kmri7cNvgsFRh6SVjxTOJEDPp9.",
+      "phone": "9765432109",
+      "address": {
+        "street": "12 T Nagar Main St",
+        "city": "Chennai",
+        "state": "Tamil Nadu",
+        "pincode": "600017"
+      },
+      "isAdmin": false,
+      "_id": "ebba275b3f3875cd3767a9bc",
+      "createdAt": "2026-11-01T15:50:35.872Z",
+      "updatedAt": "2026-11-01T15:50:35.872Z"
+    },
+    {
+      "name": "Sneha Patel",
+      "email": "sneha.patel@gmail.com",
+      "password": "$2a$10$gDBQb801y.JwtyYuMKFX5Opyj2Kmri7cNvgsFRh6SVjxTOJEDPp9.",
+      "phone": "9822334455",
+      "address": {
+        "street": "204 SG Highway",
+        "city": "Ahmedabad",
+        "state": "Gujarat",
+        "pincode": "380015"
+      },
+      "isAdmin": false,
+      "_id": "e3fd1594718a734d5adf3d9c",
+      "createdAt": "2026-11-01T15:50:35.873Z",
+      "updatedAt": "2026-11-01T15:50:35.873Z"
+    },
+    {
+      "name": "Mohammed Faizal",
+      "email": "mohammed.faizal@gmail.com",
+      "password": "$2a$10$gDBQb801y.JwtyYuMKFX5Opyj2Kmri7cNvgsFRh6SVjxTOJEDPp9.",
+      "phone": "9944556677",
+      "address": {
+        "street": "89 Commercial Street",
+        "city": "Bengaluru",
+        "state": "Karnataka",
+        "pincode": "560042"
+      },
+      "isAdmin": false,
+      "_id": "5892beef9879f9922f90a332",
+      "createdAt": "2026-11-01T15:50:35.873Z",
+      "updatedAt": "2026-11-01T15:50:35.873Z"
+    },
+    {
+      "name": "Divya Krishnan",
+      "email": "divya.krishnan@gmail.com",
+      "password": "$2a$10$gDBQb801y.JwtyYuMKFX5Opyj2Kmri7cNvgsFRh6SVjxTOJEDPp9.",
+      "phone": "9888776655",
+      "address": {
+        "street": "54 RS Puram",
+        "city": "Coimbatore",
+        "state": "Tamil Nadu",
+        "pincode": "641002"
+      },
+      "isAdmin": false,
+      "_id": "d31e2d30f85d0653f50b7db0",
+      "createdAt": "2026-11-01T15:50:35.874Z",
+      "updatedAt": "2026-11-01T15:50:35.874Z"
+    },
+    {
+      "name": "Arjun Nair",
+      "email": "arjun.nair@gmail.com",
+      "password": "$2a$10$gDBQb801y.JwtyYuMKFX5Opyj2Kmri7cNvgsFRh6SVjxTOJEDPp9.",
+      "phone": "9744112233",
+      "address": {
+        "street": "17 Panampilly Nagar",
+        "city": "Kochi",
+        "state": "Kerala",
+        "pincode": "682036"
+      },
+      "isAdmin": false,
+      "_id": "8945d50461955b9b64a1bd9b",
+      "createdAt": "2026-11-01T15:50:35.874Z",
+      "updatedAt": "2026-11-01T15:50:35.874Z"
+    },
+    {
+      "name": "Pooja Hegde",
+      "email": "pooja.hegde@gmail.com",
+      "password": "$2a$10$gDBQb801y.JwtyYuMKFX5Opyj2Kmri7cNvgsFRh6SVjxTOJEDPp9.",
+      "phone": "9855667788",
+      "address": {
+        "street": "33 Jubilee Hills",
+        "city": "Hyderabad",
+        "state": "Telangana",
+        "pincode": "500033"
+      },
+      "isAdmin": false,
+      "_id": "734b7bed98d2a587ab262ec4",
+      "createdAt": "2026-11-01T15:50:35.875Z",
+      "updatedAt": "2026-11-01T15:50:35.875Z"
+    },
+    {
+      "name": "Vikram Sundaram",
+      "email": "vikram.sundaram@gmail.com",
+      "password": "$2a$10$gDBQb801y.JwtyYuMKFX5Opyj2Kmri7cNvgsFRh6SVjxTOJEDPp9.",
+      "phone": "9819283746",
+      "address": {
+        "street": "9 Connaught Place",
+        "city": "New Delhi",
+        "state": "Delhi",
+        "pincode": "110001"
+      },
+      "isAdmin": false,
+      "_id": "fa647b33d3f09f36adf1672f",
+      "createdAt": "2026-11-01T15:50:35.876Z",
+      "updatedAt": "2026-11-01T15:50:35.876Z"
     }
   ],
   "products": [
@@ -182,5 +342,428 @@
     }
   ],
   "carts": [],
-  "orders": []
+  "orders": [
+    {
+      "user": "c948c0b2b69510bdfa7a3cd7",
+      "items": [
+        {
+          "product": "49c52baafe3ec7f5aa226a2d",
+          "name": "Ultra-Slim Laptop Pro 15\"",
+          "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&auto=format&fit=crop",
+          "price": 80999,
+          "quantity": 1
+        }
+      ],
+      "shippingAddress": {
+        "fullName": "Priya Sharma",
+        "phone": "9840123456",
+        "street": "42 MG Road",
+        "city": "Bengaluru",
+        "state": "Karnataka",
+        "pincode": "560001"
+      },
+      "paymentMethod": "Card",
+      "totalPrice": 80999,
+      "status": "Delivered",
+      "isPaid": true,
+      "paidAt": "2026-10-20T15:50:35.877Z",
+      "isDelivered": true,
+      "deliveredAt": "2026-10-20T15:50:35.877Z",
+      "createdAt": "2026-11-01T15:50:35.877Z",
+      "updatedAt": "2026-11-01T15:50:35.877Z",
+      "_id": "c680653a2f55c8bd2d14fd5f"
+    },
+    {
+      "user": "de7de45eb1342e68182f9bee",
+      "items": [
+        {
+          "product": "6b375c8c9837ed0321d29fd0",
+          "name": "Smartphone Pro Max 256GB",
+          "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&auto=format&fit=crop",
+          "price": 73599,
+          "quantity": 1
+        }
+      ],
+      "shippingAddress": {
+        "fullName": "Rahul Verma",
+        "phone": "9876543210",
+        "street": "15 Anna Nagar 2nd Ave",
+        "city": "Chennai",
+        "state": "Tamil Nadu",
+        "pincode": "600040"
+      },
+      "paymentMethod": "UPI",
+      "totalPrice": 73599,
+      "status": "Delivered",
+      "isPaid": true,
+      "paidAt": "2026-10-22T15:50:35.878Z",
+      "isDelivered": true,
+      "deliveredAt": "2026-10-22T15:50:35.878Z",
+      "createdAt": "2026-11-01T15:50:35.878Z",
+      "updatedAt": "2026-11-01T15:50:35.878Z",
+      "_id": "f0ab7a606740396e66aafb19"
+    },
+    {
+      "user": "ce89efdab102187d0fd1bf05",
+      "items": [
+        {
+          "product": "11cf32271853c882109e7298",
+          "name": "DSLR Camera Kit Pro",
+          "image": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&auto=format&fit=crop",
+          "price": 52249,
+          "quantity": 1
+        },
+        {
+          "product": "85e2f4f9521b653a2911f0ac",
+          "name": "Premium Wireless Headphones",
+          "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&auto=format&fit=crop",
+          "price": 2124,
+          "quantity": 1
+        }
+      ],
+      "shippingAddress": {
+        "fullName": "Ananya Iyer",
+        "phone": "9811223344",
+        "street": "78 Bandra West",
+        "city": "Mumbai",
+        "state": "Maharashtra",
+        "pincode": "400050"
+      },
+      "paymentMethod": "Card",
+      "totalPrice": 54373,
+      "status": "Delivered",
+      "isPaid": true,
+      "paidAt": "2026-10-23T15:50:35.879Z",
+      "isDelivered": true,
+      "deliveredAt": "2026-10-23T15:50:35.879Z",
+      "createdAt": "2026-11-01T15:50:35.879Z",
+      "updatedAt": "2026-11-01T15:50:35.879Z",
+      "_id": "7171424283bd9533c82ae6c3"
+    },
+    {
+      "user": "ebba275b3f3875cd3767a9bc",
+      "items": [
+        {
+          "product": "0286a517f5c7780ca2b3829b",
+          "name": "Smart Watch Series X",
+          "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop",
+          "price": 7199,
+          "quantity": 1
+        },
+        {
+          "product": "fe9467fcdb5cca5ed314c303",
+          "name": "Air Max Sports Sneakers",
+          "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&auto=format&fit=crop",
+          "price": 5999,
+          "quantity": 1
+        }
+      ],
+      "shippingAddress": {
+        "fullName": "Karthik Rajan",
+        "phone": "9765432109",
+        "street": "12 T Nagar Main St",
+        "city": "Chennai",
+        "state": "Tamil Nadu",
+        "pincode": "600017"
+      },
+      "paymentMethod": "Net Banking",
+      "totalPrice": 13198,
+      "status": "Delivered",
+      "isPaid": true,
+      "paidAt": "2026-10-25T15:50:35.879Z",
+      "isDelivered": true,
+      "deliveredAt": "2026-10-25T15:50:35.879Z",
+      "createdAt": "2026-11-01T15:50:35.879Z",
+      "updatedAt": "2026-11-01T15:50:35.879Z",
+      "_id": "5b54e7c1b7a1f8c687650a65"
+    },
+    {
+      "user": "e3fd1594718a734d5adf3d9c",
+      "items": [
+        {
+          "product": "c3a3feb36d8642d07fcd065d",
+          "name": "Designer Leather Backpack",
+          "image": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&auto=format&fit=crop",
+          "price": 4139,
+          "quantity": 1
+        },
+        {
+          "product": "324a5c08893908a52aa1056a",
+          "name": "UV Protection Sunglasses",
+          "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=600&auto=format&fit=crop",
+          "price": 1329,
+          "quantity": 1
+        },
+        {
+          "product": "91a1ba9e6870ef5cc37e5b40",
+          "name": "Classic Cotton T-Shirt (Pack of 3)",
+          "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&auto=format&fit=crop",
+          "price": 799,
+          "quantity": 1
+        }
+      ],
+      "shippingAddress": {
+        "fullName": "Sneha Patel",
+        "phone": "9822334455",
+        "street": "204 SG Highway",
+        "city": "Ahmedabad",
+        "state": "Gujarat",
+        "pincode": "380015"
+      },
+      "paymentMethod": "UPI",
+      "totalPrice": 6267,
+      "status": "Delivered",
+      "isPaid": true,
+      "paidAt": "2026-10-26T15:50:35.880Z",
+      "isDelivered": true,
+      "deliveredAt": "2026-10-26T15:50:35.880Z",
+      "createdAt": "2026-11-01T15:50:35.880Z",
+      "updatedAt": "2026-11-01T15:50:35.880Z",
+      "_id": "bd415340711a910fae9e9087"
+    },
+    {
+      "user": "5892beef9879f9922f90a332",
+      "items": [
+        {
+          "product": "49c52baafe3ec7f5aa226a2d",
+          "name": "Ultra-Slim Laptop Pro 15\"",
+          "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&auto=format&fit=crop",
+          "price": 80999,
+          "quantity": 1
+        },
+        {
+          "product": "291d7c11ddd1b845606befb6",
+          "name": "Wireless Gaming Mouse",
+          "image": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=600&auto=format&fit=crop",
+          "price": 3079,
+          "quantity": 1
+        }
+      ],
+      "shippingAddress": {
+        "fullName": "Mohammed Faizal",
+        "phone": "9944556677",
+        "street": "89 Commercial Street",
+        "city": "Bengaluru",
+        "state": "Karnataka",
+        "pincode": "560042"
+      },
+      "paymentMethod": "Card",
+      "totalPrice": 84078,
+      "status": "Delivered",
+      "isPaid": true,
+      "paidAt": "2026-10-27T15:50:35.880Z",
+      "isDelivered": true,
+      "deliveredAt": "2026-10-27T15:50:35.880Z",
+      "createdAt": "2026-11-01T15:50:35.880Z",
+      "updatedAt": "2026-11-01T15:50:35.880Z",
+      "_id": "d401335eea4e34373e1a3c95"
+    },
+    {
+      "user": "d31e2d30f85d0653f50b7db0",
+      "items": [
+        {
+          "product": "6b375c8c9837ed0321d29fd0",
+          "name": "Smartphone Pro Max 256GB",
+          "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&auto=format&fit=crop",
+          "price": 73599,
+          "quantity": 1
+        },
+        {
+          "product": "85e2f4f9521b653a2911f0ac",
+          "name": "Premium Wireless Headphones",
+          "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&auto=format&fit=crop",
+          "price": 2124,
+          "quantity": 1
+        }
+      ],
+      "shippingAddress": {
+        "fullName": "Divya Krishnan",
+        "phone": "9888776655",
+        "street": "54 RS Puram",
+        "city": "Coimbatore",
+        "state": "Tamil Nadu",
+        "pincode": "641002"
+      },
+      "paymentMethod": "UPI",
+      "totalPrice": 75723,
+      "status": "Shipped",
+      "isPaid": true,
+      "paidAt": "2026-10-29T15:50:35.881Z",
+      "isDelivered": false,
+      "createdAt": "2026-11-01T15:50:35.881Z",
+      "updatedAt": "2026-11-01T15:50:35.881Z",
+      "_id": "7b384038e07c521d136367d8"
+    },
+    {
+      "user": "8945d50461955b9b64a1bd9b",
+      "items": [
+        {
+          "product": "11cf32271853c882109e7298",
+          "name": "DSLR Camera Kit Pro",
+          "image": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&auto=format&fit=crop",
+          "price": 52249,
+          "quantity": 1
+        }
+      ],
+      "shippingAddress": {
+        "fullName": "Arjun Nair",
+        "phone": "9744112233",
+        "street": "17 Panampilly Nagar",
+        "city": "Kochi",
+        "state": "Kerala",
+        "pincode": "682036"
+      },
+      "paymentMethod": "Net Banking",
+      "totalPrice": 52249,
+      "status": "Shipped",
+      "isPaid": true,
+      "paidAt": "2026-10-30T15:50:35.882Z",
+      "isDelivered": false,
+      "createdAt": "2026-11-01T15:50:35.882Z",
+      "updatedAt": "2026-11-01T15:50:35.882Z",
+      "_id": "6802736e6a8f7b9690b6f13c"
+    },
+    {
+      "user": "734b7bed98d2a587ab262ec4",
+      "items": [
+        {
+          "product": "0286a517f5c7780ca2b3829b",
+          "name": "Smart Watch Series X",
+          "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop",
+          "price": 7199,
+          "quantity": 1
+        },
+        {
+          "product": "a0b09798922b88bdde67a280",
+          "name": "Yoga Mat Premium 6mm",
+          "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&auto=format&fit=crop",
+          "price": 1039,
+          "quantity": 1
+        }
+      ],
+      "shippingAddress": {
+        "fullName": "Pooja Hegde",
+        "phone": "9855667788",
+        "street": "33 Jubilee Hills",
+        "city": "Hyderabad",
+        "state": "Telangana",
+        "pincode": "500033"
+      },
+      "paymentMethod": "UPI",
+      "totalPrice": 8238,
+      "status": "Processing",
+      "isPaid": true,
+      "paidAt": "2026-10-31T15:50:35.882Z",
+      "isDelivered": false,
+      "createdAt": "2026-11-01T15:50:35.882Z",
+      "updatedAt": "2026-11-01T15:50:35.882Z",
+      "_id": "d0522948bb8461be82fccfe5"
+    },
+    {
+      "user": "fa647b33d3f09f36adf1672f",
+      "items": [
+        {
+          "product": "fe9467fcdb5cca5ed314c303",
+          "name": "Air Max Sports Sneakers",
+          "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&auto=format&fit=crop",
+          "price": 5999,
+          "quantity": 1
+        },
+        {
+          "product": "969cedca0d03c2806f69f297",
+          "name": "Stainless Steel Water Bottle 1L",
+          "image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=600&auto=format&fit=crop",
+          "price": 764,
+          "quantity": 1
+        }
+      ],
+      "shippingAddress": {
+        "fullName": "Vikram Sundaram",
+        "phone": "9819283746",
+        "street": "9 Connaught Place",
+        "city": "New Delhi",
+        "state": "Delhi",
+        "pincode": "110001"
+      },
+      "paymentMethod": "COD",
+      "totalPrice": 6763,
+      "status": "Processing",
+      "isPaid": false,
+      "paidAt": "2026-10-31T15:50:35.883Z",
+      "isDelivered": false,
+      "createdAt": "2026-11-01T15:50:35.883Z",
+      "updatedAt": "2026-11-01T15:50:35.883Z",
+      "_id": "188277750c15b48b5c9836b8"
+    },
+    {
+      "user": "c948c0b2b69510bdfa7a3cd7",
+      "items": [
+        {
+          "product": "85e2f4f9521b653a2911f0ac",
+          "name": "Premium Wireless Headphones",
+          "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&auto=format&fit=crop",
+          "price": 2124,
+          "quantity": 1
+        },
+        {
+          "product": "291d7c11ddd1b845606befb6",
+          "name": "Wireless Gaming Mouse",
+          "image": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=600&auto=format&fit=crop",
+          "price": 3079,
+          "quantity": 1
+        }
+      ],
+      "shippingAddress": {
+        "fullName": "Priya Sharma",
+        "phone": "9840123456",
+        "street": "42 MG Road",
+        "city": "Bengaluru",
+        "state": "Karnataka",
+        "pincode": "560001"
+      },
+      "paymentMethod": "COD",
+      "totalPrice": 5203,
+      "status": "Pending",
+      "isPaid": false,
+      "isDelivered": false,
+      "createdAt": "2026-11-01T15:50:35.884Z",
+      "updatedAt": "2026-11-01T15:50:35.884Z",
+      "_id": "3ba0ff43f879232ec465cb75"
+    },
+    {
+      "user": "ebba275b3f3875cd3767a9bc",
+      "items": [
+        {
+          "product": "c3a3feb36d8642d07fcd065d",
+          "name": "Designer Leather Backpack",
+          "image": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&auto=format&fit=crop",
+          "price": 4139,
+          "quantity": 1
+        },
+        {
+          "product": "324a5c08893908a52aa1056a",
+          "name": "UV Protection Sunglasses",
+          "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=600&auto=format&fit=crop",
+          "price": 1329,
+          "quantity": 1
+        }
+      ],
+      "shippingAddress": {
+        "fullName": "Karthik Rajan",
+        "phone": "9765432109",
+        "street": "12 T Nagar Main St",
+        "city": "Chennai",
+        "state": "Tamil Nadu",
+        "pincode": "600017"
+      },
+      "paymentMethod": "UPI",
+      "totalPrice": 5468,
+      "status": "Pending",
+      "isPaid": true,
+      "isDelivered": false,
+      "createdAt": "2026-11-01T15:50:35.885Z",
+      "updatedAt": "2026-11-01T15:50:35.885Z",
+      "_id": "db1e81268d23a3e0b26f444f"
+    }
+  ]
 }

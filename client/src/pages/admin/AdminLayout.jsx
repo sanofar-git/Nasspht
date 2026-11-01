@@ -1,9 +1,20 @@
+import { useState, useEffect } from 'react'
 import { Outlet, NavLink, useNavigate } from 'react-router-dom'
 import { useAuth } from '../../context/AuthContext'
 
 export default function AdminLayout() {
   const { user, logout } = useAuth()
   const navigate = useNavigate()
+  const [theme, setTheme] = useState(() => localStorage.getItem('vizhop_theme') || 'dark')
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme)
+    localStorage.setItem('vizhop_theme', theme)
+  }, [theme])
+
+  const toggleTheme = () => {
+    setTheme(prev => (prev === 'dark' ? 'light' : 'dark'))
+  }
 
   const handleLogout = () => { logout(); navigate('/') }
 
@@ -55,7 +66,17 @@ export default function AdminLayout() {
       <main className="admin-main">
         <div className="admin-topbar">
           <div className="admin-breadcrumb">Admin Dashboard</div>
-          <div className="admin-topbar-right">
+          <div className="admin-topbar-right" style={{display:'flex', alignItems:'center', gap:'12px'}}>
+            <button
+              className="theme-toggle-btn"
+              onClick={toggleTheme}
+              title={`Switch to ${theme === 'dark' ? 'Light' : 'Dark'} Mode`}
+              aria-label="Toggle Theme"
+              id="admin-theme-btn"
+              style={{width:'38px', height:'38px', fontSize:'1rem'}}
+            >
+              {theme === 'dark' ? '☀️' : '🌙'}
+            </button>
             <span className="badge badge-purple">Admin Mode</span>
           </div>
         </div>
@@ -69,9 +90,9 @@ export default function AdminLayout() {
         .admin-sidebar {
           width: 260px;
           flex-shrink: 0;
-          background: rgba(5, 0, 26, 0.9);
+          background: var(--nav-bg-scrolled, rgba(5, 0, 26, 0.9));
           backdrop-filter: blur(20px);
-          border-right: 1px solid rgba(255,255,255,0.06);
+          border-right: 1px solid var(--glass-border);
           display: flex;
           flex-direction: column;
           padding: 24px 16px;
@@ -120,9 +141,9 @@ export default function AdminLayout() {
         .admin-topbar {
           display: flex; align-items: center; justify-content: space-between;
           padding: 16px 28px;
-          background: rgba(5,0,26,0.6);
+          background: var(--nav-bg, rgba(5,0,26,0.6));
           backdrop-filter: blur(10px);
-          border-bottom: 1px solid rgba(255,255,255,0.06);
+          border-bottom: 1px solid var(--glass-border);
           position: sticky; top: 0; z-index: 50;
         }
         .admin-breadcrumb { font-weight: 600; color: var(--text-primary); }

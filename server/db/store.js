@@ -247,3 +247,4 @@ class JsonStore {
 
 const store = new JsonStore();
 module.exports = { store, generateId };
+
