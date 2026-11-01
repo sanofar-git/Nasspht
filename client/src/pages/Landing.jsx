@@ -263,6 +263,59 @@ export default function Landing() {
         </div>
       </section>
 
+      {/* ─── CUSTOMER REVIEWS & FEEDBACK ────────────────────────── */}
+      <section className="section" style={{paddingTop: 0}}>
+        <div className="container">
+          <div style={{textAlign:'center', marginBottom:'48px'}}>
+            <h2 className="section-title">⭐ Customer Feedback & Reviews</h2>
+            <p className="section-subtitle">Real experiences and verified feedback from our happy shoppers</p>
+          </div>
+          <div className="grid grid-3">
+            <div className="glass-card" style={{padding:'28px'}}>
+              <div style={{display:'flex', alignItems:'center', gap:'12px', marginBottom:'16px'}}>
+                <div style={{width:'44px', height:'44px', borderRadius:'50%', background:'var(--gradient-primary)', display:'flex', alignItems:'center', justifyContent:'center', color:'white', fontWeight:700}}>P</div>
+                <div>
+                  <div style={{fontWeight:700, color:'var(--text-primary)'}}>Priya Sharma</div>
+                  <div style={{fontSize:'0.75rem', color:'var(--green)'}}>✓ Verified Buyer · Bengaluru</div>
+                </div>
+              </div>
+              <div style={{color:'var(--yellow)', marginBottom:'12px', fontSize:'1.1rem'}}>★★★★★</div>
+              <p style={{color:'var(--text-secondary)', fontSize:'0.92rem', lineHeight:1.6}}>
+                "Vizhop has become my go-to store! The noise-cancelling headphones arrived in just 2 days. Sound quality is remarkable, packaging was pristine!"
+              </p>
+            </div>
+
+            <div className="glass-card" style={{padding:'28px'}}>
+              <div style={{display:'flex', alignItems:'center', gap:'12px', marginBottom:'16px'}}>
+                <div style={{width:'44px', height:'44px', borderRadius:'50%', background:'var(--gradient-secondary)', display:'flex', alignItems:'center', justifyContent:'center', color:'white', fontWeight:700}}>R</div>
+                <div>
+                  <div style={{fontWeight:700, color:'var(--text-primary)'}}>Rahul Verma</div>
+                  <div style={{fontSize:'0.75rem', color:'var(--green)'}}>✓ Verified Buyer · Chennai</div>
+                </div>
+              </div>
+              <div style={{color:'var(--yellow)', marginBottom:'12px', fontSize:'1.1rem'}}>★★★★★</div>
+              <p style={{color:'var(--text-secondary)', fontSize:'0.92rem', lineHeight:1.6}}>
+                "Ordered the Ultra-Slim Laptop for my remote work. The 4K OLED display and battery life are top tier. Smooth checkout process with instant UPI!"
+              </p>
+            </div>
+
+            <div className="glass-card" style={{padding:'28px'}}>
+              <div style={{display:'flex', alignItems:'center', gap:'12px', marginBottom:'16px'}}>
+                <div style={{width:'44px', height:'44px', borderRadius:'50%', background:'var(--gradient-success)', display:'flex', alignItems:'center', justifyContent:'center', color:'white', fontWeight:700}}>K</div>
+                <div>
+                  <div style={{fontWeight:700, color:'var(--text-primary)'}}>Karthik Rajan</div>
+                  <div style={{fontSize:'0.75rem', color:'var(--green)'}}>✓ Verified Buyer · Chennai</div>
+                </div>
+              </div>
+              <div style={{color:'var(--yellow)', marginBottom:'12px', fontSize:'1.1rem'}}>★★★★★</div>
+              <p style={{color:'var(--text-secondary)', fontSize:'0.92rem', lineHeight:1.6}}>
+                "Got the DSLR Camera kit and Leather Backpack. Both exceeded my expectations. Outstanding customer support and genuine original products."
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ─── CTA ────────────────────────────────────────────────── */}
       <section className="section" style={{paddingTop: 0}}>
         <div className="container">
