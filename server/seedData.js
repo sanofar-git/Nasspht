@@ -73,7 +73,7 @@ const sampleMembers = [
   },
 ];
 
-async function seedMembersAndOrders(User, Product, Order) {
+async function seedMembersAndOrders(User, Product, Order, forceRefresh = false) {
   try {
     const userCount = await User.countDocuments({ isAdmin: false });
     if (userCount < 10) {
@@ -95,97 +95,53 @@ async function seedMembersAndOrders(User, Product, Order) {
     }
 
     const orderCount = await Order.countDocuments();
-    if (orderCount === 0) {
+    if (orderCount < 20 || forceRefresh) {
       const allUsers = await User.find({ isAdmin: false });
       const allProducts = await Product.find();
 
       if (allUsers.length > 0 && allProducts.length > 0) {
         const orderTemplates = [
-          {
-            userIndex: 0,
-            productIndices: [1], // Ultra-Slim Laptop Pro 15"
-            status: 'Delivered',
-            paymentMethod: 'Card',
-            daysAgo: 12,
-          },
-          {
-            userIndex: 1,
-            productIndices: [7], // Smartphone Pro Max 256GB
-            status: 'Delivered',
-            paymentMethod: 'UPI',
-            daysAgo: 10,
-          },
-          {
-            userIndex: 2,
-            productIndices: [3, 0], // DSLR Camera + Headphones
-            status: 'Delivered',
-            paymentMethod: 'Card',
-            daysAgo: 9,
-          },
-          {
-            userIndex: 3,
-            productIndices: [2, 4], // Smart Watch + Sneakers
-            status: 'Delivered',
-            paymentMethod: 'Net Banking',
-            daysAgo: 7,
-          },
-          {
-            userIndex: 4,
-            productIndices: [5, 6, 8], // Leather Backpack + Sunglasses + T-Shirt
-            status: 'Delivered',
-            paymentMethod: 'UPI',
-            daysAgo: 6,
-          },
-          {
-            userIndex: 5,
-            productIndices: [1, 9], // Laptop + Gaming Mouse
-            status: 'Delivered',
-            paymentMethod: 'Card',
-            daysAgo: 5,
-          },
-          {
-            userIndex: 6,
-            productIndices: [7, 0], // Smartphone + Headphones
-            status: 'Shipped',
-            paymentMethod: 'UPI',
-            daysAgo: 3,
-          },
-          {
-            userIndex: 7,
-            productIndices: [3], // DSLR Camera
-            status: 'Shipped',
-            paymentMethod: 'Net Banking',
-            daysAgo: 2,
-          },
-          {
-            userIndex: 8,
-            productIndices: [2, 11], // Smart Watch + Yoga Mat
-            status: 'Processing',
-            paymentMethod: 'UPI',
-            daysAgo: 1,
-          },
-          {
-            userIndex: 9,
-            productIndices: [4, 10], // Sneakers + Water Bottle
-            status: 'Processing',
-            paymentMethod: 'COD',
-            daysAgo: 1,
-          },
-          {
-            userIndex: 0,
-            productIndices: [0, 9], // Headphones + Gaming Mouse
-            status: 'Pending',
-            paymentMethod: 'COD',
-            daysAgo: 0,
-          },
-          {
-            userIndex: 3,
-            productIndices: [5, 6], // Backpack + Sunglasses
-            status: 'Pending',
-            paymentMethod: 'UPI',
-            daysAgo: 0,
-          },
+          // Delivered high-value orders
+          { userIndex: 0, productIndices: [1], status: 'Delivered', paymentMethod: 'Card', daysAgo: 25 },
+          { userIndex: 1, productIndices: [7], status: 'Delivered', paymentMethod: 'UPI', daysAgo: 24 },
+          { userIndex: 2, productIndices: [3, 0], status: 'Delivered', paymentMethod: 'Card', daysAgo: 22 },
+          { userIndex: 3, productIndices: [2, 4], status: 'Delivered', paymentMethod: 'Net Banking', daysAgo: 20 },
+          { userIndex: 4, productIndices: [5, 6, 8], status: 'Delivered', paymentMethod: 'UPI', daysAgo: 19 },
+          { userIndex: 5, productIndices: [1, 9], status: 'Delivered', paymentMethod: 'Card', daysAgo: 18 },
+          { userIndex: 6, productIndices: [7, 0], status: 'Delivered', paymentMethod: 'UPI', daysAgo: 16 },
+          { userIndex: 7, productIndices: [3], status: 'Delivered', paymentMethod: 'Net Banking', daysAgo: 15 },
+          { userIndex: 8, productIndices: [1], status: 'Delivered', paymentMethod: 'Card', daysAgo: 14 },
+          { userIndex: 9, productIndices: [7, 2], status: 'Delivered', paymentMethod: 'UPI', daysAgo: 12 },
+          { userIndex: 0, productIndices: [3, 4], status: 'Delivered', paymentMethod: 'Card', daysAgo: 11 },
+          { userIndex: 1, productIndices: [1, 5], status: 'Delivered', paymentMethod: 'Net Banking', daysAgo: 10 },
+          { userIndex: 2, productIndices: [7], status: 'Delivered', paymentMethod: 'UPI', daysAgo: 9 },
+          { userIndex: 3, productIndices: [0, 2, 9], status: 'Delivered', paymentMethod: 'Card', daysAgo: 8 },
+
+          // Shipped orders
+          { userIndex: 4, productIndices: [3], status: 'Shipped', paymentMethod: 'UPI', daysAgo: 6 },
+          { userIndex: 5, productIndices: [4, 6], status: 'Shipped', paymentMethod: 'Card', daysAgo: 5 },
+          { userIndex: 6, productIndices: [1], status: 'Shipped', paymentMethod: 'Net Banking', daysAgo: 4 },
+          { userIndex: 7, productIndices: [7, 9], status: 'Shipped', paymentMethod: 'UPI', daysAgo: 3 },
+
+          // Processing orders
+          { userIndex: 8, productIndices: [2, 11], status: 'Processing', paymentMethod: 'UPI', daysAgo: 3 },
+          { userIndex: 9, productIndices: [4, 10], status: 'Processing', paymentMethod: 'COD', daysAgo: 2 },
+          { userIndex: 0, productIndices: [5, 6, 8], status: 'Processing', paymentMethod: 'Card', daysAgo: 2 },
+          { userIndex: 1, productIndices: [0, 9], status: 'Processing', paymentMethod: 'UPI', daysAgo: 1 },
+
+          // Confirmed / Pending orders
+          { userIndex: 2, productIndices: [1], status: 'Confirmed', paymentMethod: 'Card', daysAgo: 1 },
+          { userIndex: 3, productIndices: [7], status: 'Confirmed', paymentMethod: 'UPI', daysAgo: 1 },
+          { userIndex: 4, productIndices: [3, 2], status: 'Pending', paymentMethod: 'COD', daysAgo: 0 },
+          { userIndex: 5, productIndices: [0, 4, 11], status: 'Pending', paymentMethod: 'COD', daysAgo: 0 },
         ];
+
+        // Clear existing orders if refreshing to prevent duplicates
+        if (forceRefresh) {
+          const { store } = require('./db/store');
+          store.data.orders = [];
+          store.save();
+        }
 
         for (const t of orderTemplates) {
           const u = allUsers[t.userIndex % allUsers.length];
@@ -237,4 +193,3 @@ async function seedMembersAndOrders(User, Product, Order) {
 }
 
 module.exports = { sampleMembers, seedMembersAndOrders };
-

@@ -24,11 +24,28 @@ const getDashboardStats = async (req, res) => {
     const pendingOrders = await Order.countDocuments({ status: 'Pending' });
     const deliveredOrders = await Order.countDocuments({ status: 'Delivered' });
 
+    const allOrders = await Order.find();
+    const totalRev = revenueResult[0]?.total || 0;
+    const deliveredRevenue = allOrders
+      .filter((o) => o.status === 'Delivered')
+      .reduce((sum, o) => sum + (o.totalPrice || 0), 0);
+    const onlineRevenue = allOrders
+      .filter((o) => o.paymentMethod !== 'COD')
+      .reduce((sum, o) => sum + (o.totalPrice || 0), 0);
+    const codRevenue = allOrders
+      .filter((o) => o.paymentMethod === 'COD')
+      .reduce((sum, o) => sum + (o.totalPrice || 0), 0);
+    const avgOrderValue = totalOrders > 0 ? Math.round(totalRev / totalOrders) : 0;
+
     res.json({
       totalUsers,
       totalProducts,
       totalOrders,
-      totalRevenue: revenueResult[0]?.total || 0,
+      totalRevenue: totalRev,
+      deliveredRevenue,
+      onlineRevenue,
+      codRevenue,
+      avgOrderValue,
       pendingOrders,
       deliveredOrders,
       recentOrders,

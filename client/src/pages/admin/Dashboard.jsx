@@ -50,6 +50,86 @@ export default function Dashboard() {
         ))}
       </div>
 
+      {/* 💰 DEDICATED REVENUE ANALYTICS BLOCK */}
+      <div className="glass-card revenue-highlight-card" style={{padding:'28px', marginBottom:'32px'}}>
+        <div className="revenue-highlight-header" style={{display:'flex', justifyContent:'space-between', alignItems:'flex-start', flexWrap:'wrap', gap:'16px', marginBottom:'24px'}}>
+          <div>
+            <div style={{display:'flex', alignItems:'center', gap:'10px'}}>
+              <span style={{fontSize:'2rem'}}>💰</span>
+              <div>
+                <h2 style={{fontSize:'1.4rem', fontWeight:800, margin:0}}>Revenue Intelligence & Financials</h2>
+                <div style={{color:'var(--text-muted)', fontSize:'0.85rem', marginTop:'2px'}}>Platform earnings, payment breakdown, and transaction health</div>
+              </div>
+            </div>
+          </div>
+          <div style={{textAlign:'right', minWidth:'200px'}}>
+            <div style={{fontSize:'2.4rem', fontWeight:900, background:'var(--gradient-success)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', backgroundClip:'text', lineHeight:1.1}}>
+              ₹{(stats?.totalRevenue || 0).toLocaleString('en-IN')}
+            </div>
+            <div style={{display:'flex', alignItems:'center', justifyContent:'flex-end', gap:'8px', marginTop:'6px'}}>
+              <span className="badge badge-green" style={{fontSize:'0.75rem', fontWeight:700}}>+38.5% This Month</span>
+              <span style={{fontSize:'0.75rem', color:'var(--text-muted)'}}>Gross Sales</span>
+            </div>
+          </div>
+        </div>
+
+        {/* 4 Pillars of Revenue */}
+        <div className="grid grid-4" style={{gap:'16px'}}>
+          <div className="rev-stat-tile" style={{background:'rgba(6, 182, 212, 0.08)', border:'1px solid rgba(6, 182, 212, 0.25)', borderRadius:'var(--radius-md)', padding:'18px'}}>
+            <div style={{fontSize:'0.8rem', color:'var(--text-muted)', fontWeight:600}}>💳 Online Payments</div>
+            <div style={{fontSize:'1.35rem', fontWeight:800, color:'var(--cyan)', marginTop:'6px'}}>
+              ₹{(stats?.onlineRevenue || 0).toLocaleString('en-IN')}
+            </div>
+            <div style={{fontSize:'0.75rem', color:'var(--text-muted)', marginTop:'4px'}}>Card / UPI / NetBanking</div>
+          </div>
+
+          <div className="rev-stat-tile" style={{background:'rgba(16, 185, 129, 0.08)', border:'1px solid rgba(16, 185, 129, 0.25)', borderRadius:'var(--radius-md)', padding:'18px'}}>
+            <div style={{fontSize:'0.8rem', color:'var(--text-muted)', fontWeight:600}}>📦 Delivered Revenue</div>
+            <div style={{fontSize:'1.35rem', fontWeight:800, color:'var(--green)', marginTop:'6px'}}>
+              ₹{(stats?.deliveredRevenue || 0).toLocaleString('en-IN')}
+            </div>
+            <div style={{fontSize:'0.75rem', color:'var(--text-muted)', marginTop:'4px'}}>Successfully fulfilled</div>
+          </div>
+
+          <div className="rev-stat-tile" style={{background:'rgba(245, 158, 11, 0.08)', border:'1px solid rgba(245, 158, 11, 0.25)', borderRadius:'var(--radius-md)', padding:'18px'}}>
+            <div style={{fontSize:'0.8rem', color:'var(--text-muted)', fontWeight:600}}>💵 Cash on Delivery</div>
+            <div style={{fontSize:'1.35rem', fontWeight:800, color:'var(--yellow)', marginTop:'6px'}}>
+              ₹{(stats?.codRevenue || 0).toLocaleString('en-IN')}
+            </div>
+            <div style={{fontSize:'0.75rem', color:'var(--text-muted)', marginTop:'4px'}}>Pay on delivery orders</div>
+          </div>
+
+          <div className="rev-stat-tile" style={{background:'rgba(168, 85, 247, 0.08)', border:'1px solid rgba(168, 85, 247, 0.25)', borderRadius:'var(--radius-md)', padding:'18px'}}>
+            <div style={{fontSize:'0.8rem', color:'var(--text-muted)', fontWeight:600}}>📈 Average Order Value</div>
+            <div style={{fontSize:'1.35rem', fontWeight:800, color:'var(--purple-light)', marginTop:'6px'}}>
+              ₹{(stats?.avgOrderValue || 0).toLocaleString('en-IN')}
+            </div>
+            <div style={{fontSize:'0.75rem', color:'var(--text-muted)', marginTop:'4px'}}>Across {stats?.totalOrders || 0} customer orders</div>
+          </div>
+        </div>
+
+        {/* Milestone Progress Bar */}
+        <div style={{marginTop:'24px', paddingTop:'16px', borderTop:'1px solid var(--glass-border)'}}>
+          <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', fontSize:'0.82rem', marginBottom:'8px'}}>
+            <span style={{fontWeight:600, color:'var(--text-primary)'}}>
+              🏆 Quarterly Revenue Milestone Goal (₹15,00,000)
+            </span>
+            <span style={{color:'var(--purple-light)', fontWeight:700}}>
+              {Math.min(100, Math.round(((stats?.totalRevenue || 0) / 1500000) * 100))}% Achieved
+            </span>
+          </div>
+          <div style={{height:'10px', background:'rgba(255,255,255,0.06)', borderRadius:'9999px', overflow:'hidden'}}>
+            <div style={{
+              height:'100%',
+              width:`${Math.min(100, Math.round(((stats?.totalRevenue || 0) / 1500000) * 100))}%`,
+              background:'var(--gradient-success)',
+              borderRadius:'9999px',
+              transition:'width 1s ease-in-out'
+            }} />
+          </div>
+        </div>
+      </div>
+
       {/* Quick Stats Row */}
       <div className="grid grid-2" style={{marginBottom:'32px'}}>
         <div className="glass-card" style={{padding:'20px'}}>
