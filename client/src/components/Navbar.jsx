@@ -102,13 +102,13 @@ export default function Navbar() {
 
             {/* Theme Toggle */}
             <button
-              className="theme-toggle-btn"
+              className="theme-toggle-pill"
               onClick={toggleTheme}
               title={`Switch to ${theme === 'dark' ? 'Light' : 'Dark'} Mode`}
               aria-label="Toggle Theme"
               id="navbar-theme-btn"
             >
-              {theme === 'dark' ? '☀️' : '🌙'}
+              <span>{theme === 'dark' ? '☀️ Light' : '🌙 Dark'}</span>
             </button>
 
             {/* Mobile Hamburger */}
@@ -274,21 +274,31 @@ export default function Navbar() {
           cursor: pointer;
           padding: 8px;
         }
-        .theme-toggle-btn {
-          width: 44px; height: 44px;
-          display: flex; align-items: center; justify-content: center;
-          background: rgba(255,255,255,0.06);
-          border: 1px solid rgba(255,255,255,0.1);
+        .theme-toggle-pill {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          padding: 8px 16px;
+          background: rgba(168, 85, 247, 0.15);
+          border: 1px solid rgba(168, 85, 247, 0.4);
           border-radius: var(--radius-full);
           cursor: pointer;
           transition: var(--transition);
-          font-size: 1.15rem;
+          font-size: 0.85rem;
+          font-weight: 700;
           color: var(--text-primary);
+          font-family: var(--font);
         }
-        .theme-toggle-btn:hover {
-          background: rgba(168,85,247,0.2);
-          border-color: var(--purple);
-          transform: scale(1.08);
+        .theme-toggle-pill:hover {
+          background: rgba(168, 85, 247, 0.3);
+          border-color: var(--purple-light);
+          transform: translateY(-2px);
+          box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
+        }
+        [data-theme="light"] .theme-toggle-pill {
+          background: rgba(147, 51, 234, 0.1);
+          border-color: rgba(147, 51, 234, 0.4);
+          color: #9333ea;
         }
         .theme-mobile-link {
           display: flex;

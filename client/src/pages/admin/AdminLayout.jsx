@@ -68,14 +68,13 @@ export default function AdminLayout() {
           <div className="admin-breadcrumb">Admin Dashboard</div>
           <div className="admin-topbar-right" style={{display:'flex', alignItems:'center', gap:'12px'}}>
             <button
-              className="theme-toggle-btn"
+              className="theme-toggle-pill"
               onClick={toggleTheme}
               title={`Switch to ${theme === 'dark' ? 'Light' : 'Dark'} Mode`}
               aria-label="Toggle Theme"
               id="admin-theme-btn"
-              style={{width:'38px', height:'38px', fontSize:'1rem'}}
             >
-              {theme === 'dark' ? '☀️' : '🌙'}
+              <span>{theme === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode'}</span>
             </button>
             <span className="badge badge-purple">Admin Mode</span>
           </div>

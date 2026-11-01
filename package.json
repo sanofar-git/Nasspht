@@ -1,0 +1,13 @@
+{
+  "name": "vizhop-platform",
+  "version": "1.0.0",
+  "description": "Vizhop Full-Stack E-Commerce Platform with Light/Dark Themes and Admin Panel",
+  "scripts": {
+    "dev": "node start-dev.js",
+    "start": "node start-dev.js",
+    "server": "cd server && npm start",
+    "client": "cd client && npm run dev",
+    "build": "cd client && npm run build"
+  }
+}
+
